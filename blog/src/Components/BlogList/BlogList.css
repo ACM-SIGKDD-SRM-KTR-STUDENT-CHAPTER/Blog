@@ -1,0 +1,13 @@
+.container-fluid {
+    padding: 0; /* Adjust container padding if needed */
+}
+
+.row {
+    margin-bottom: 1rem; /* Adjust spacing between rows */
+}
+
+.col-md-6, .col-lg-4 {
+    margin-bottom: 1rem; /* Adjust spacing between cards */
+}
+
+  

@@ -1,0 +1,15 @@
+.header {
+    background-color: #00008B; /* Dark blue background */
+    padding: 0.5rem 1rem; /* Reduce padding for upper and lower */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo {
+    transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.1);
+}

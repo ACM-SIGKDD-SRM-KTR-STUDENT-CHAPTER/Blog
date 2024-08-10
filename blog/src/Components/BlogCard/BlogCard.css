@@ -1,0 +1,28 @@
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem; /* Adjust padding as needed */
+    margin: 1rem; /* Adjust margin as needed */
+    border: 3px solid #007bff; /* Ensure border is consistent */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start with a bit of translation */
+}

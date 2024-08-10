@@ -1,0 +1,30 @@
+.footer {
+    background-color: #00008B; /* Dark blue background */
+    color: white;
+    position: relative; /* Ensure proper positioning */
+    bottom: 0;
+    width: 100%;
+    z-index: 1; /* Ensure it stays on top of the background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add padding to avoid content touching the edges */
+}
+
+.footer .left-content {
+    flex: 1;
+}
+
+.footer .right-content {
+    flex: 1;
+    text-align: right;
+}
+
+.footer a {
+    color: #00CED1; /* Light cyan for links */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
