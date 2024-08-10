@@ -2,12 +2,12 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Logo from "../../../../public/favicon-32x32.png"
 import Image from 'next/image';
-
+import Link from 'next/link';
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Blog Page', href: 'blog', current: false },
+  { name: 'Profile', href: 'profile', current: false },
+  { name: 'Create Blog', href: 'createblog', current: false },
+  { name: 'Edit Blog', href: 'editblog', current: false },
 ]
 
 function classNames(...classes) {
@@ -29,15 +29,17 @@ export default function Example() {
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
-            <Image
-                alt="srmsigkdd logo"
-                src={Logo}
-                width={50} // Specify width
-                height={50} // Specify height
-                className="h-10 w-auto"
-              />
-            </div>
+          <div className="flex flex-shrink-0 items-center">
+  <Link href="/">
+      <Image
+        alt="srmsigkdd logo"
+        src={Logo}
+        width={50} // Specify width
+        height={50} // Specify height
+        className="h-10 w-auto"
+      />
+  </Link>
+</div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
@@ -72,9 +74,11 @@ export default function Example() {
                 <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Open user menu</span>
-                  <img
+                  <Image
                     alt=""
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    width={50} // Specify width
+                    height={50}
+                    src={Logo}
                     className="h-8 w-8 rounded-full"
                   />
                 </MenuButton>
@@ -84,13 +88,13 @@ export default function Example() {
                 className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
               >
                 <MenuItem>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                  <a href="profile" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                     Your Profile
                   </a>
                 </MenuItem>
                 <MenuItem>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
-                    Settings
+                  <a href="createblog" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                    Create Blog
                   </a>
                 </MenuItem>
                 <MenuItem>
